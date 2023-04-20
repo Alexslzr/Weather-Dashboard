@@ -5,7 +5,7 @@ body{
 
 header{
     text-align: center;
-    background-color: blue;
+    background: linear-gradient(270deg, #271661ff, #4558B6ff);
     color: white;
     padding: 10px;
 }
@@ -34,6 +34,37 @@ section{
     width: 70%;
 }
 
+#today{
+    margin-top: 20px;
+    padding-left: 3px;
+}
+
 .nextday{
     width: 18%;
+    border: 1px solid black;
+    padding-left: 5px;
+    color: white;
+    background: #323D4Fff;
 }
+
+#btn{
+    margin-top: 10px;
+    background: #6991E3ff;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+#cities{
+    text-align: center;
+    border-top: 1px solid gray;
+}
+
+/* CSS HEX 
+--charcoal: #323D4Fff;
+--cornflower-blue: #6991E3ff;
+--federal-blue: #271661ff;
+--byzantine-blue: #4558B6ff;
+--silver: #AEAEAEff;
+*/

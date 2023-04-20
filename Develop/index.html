@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="Assets/css/styles.css">
     <title>Weather Dashboard</title>
     
@@ -14,54 +24,55 @@
     </header>
     <main>
         <section>
-            <h2>Search for a City</h2>
+            <h2>Search for a City:</h2>
             <input>
             <button id="btn">Search</button>
-            <div id="cities"></div>
+            <div id="cities"> <h1>Hola</h1></div>
         </section>
         <div id="rightside">
             <div id="today">
-                <h2>city</h2>
+                <h2 id="t">City</h2>
                 <p id="temp">Temp:</p>
                 <p id="wind">Wind:</p>
                 <p id="hum">Humidity:</p>
             </div>
-            <h2>5-Day Forecast</h2>
+            <h2>5-Day Forecast:</h2>
             <div id="day5">
-                <div id="today" class="nextday">
-                    <h2>city</h2>
-                    <p id="temp">Temp:</p>
-                    <p id="wind">Wind:</p>
-                    <p id="hum">Humidity:</p>
+                <div class="nextday">
+                    <h3 id="t1"></h3>
+                    <p id="temp1">Temp:</p>
+                    <p id="wind1">Wind:</p>
+                    <p id="hum1">Humidity:</p>
                 </div>
-                <div id="today" class="nextday">
-                    <h2>city</h2>
-                    <p id="temp">Temp:</p>
-                    <p id="wind">Wind:</p>
-                    <p id="hum">Humidity:</p>
+                <div  class="nextday">
+                    <h3 id="t2"></h3>
+                    <p id="temp2">Temp:</p>
+                    <p id="wind2">Wind:</p>
+                    <p id="hum2">Humidity:</p>
                 </div>
-                <div id="today" class="nextday">
-                    <h2>city</h2>
-                    <p id="temp">Temp:</p>
-                    <p id="wind">Wind:</p>
-                    <p id="hum">Humidity:</p>
+                <div  class="nextday">
+                    <h3 id="t3"></h3>
+                    <p id="temp3">Temp:</p>
+                    <p id="wind3">Wind:</p>
+                    <p id="hum3">Humidity:</p>
                 </div>
-                <div id="today" class="nextday">
-                    <h2>city</h2>
-                    <p id="temp">Temp:</p>
-                    <p id="wind">Wind:</p>
-                    <p id="hum">Humidity:</p>
+                <div  class="nextday">
+                    <h3 id="t4"></h3>
+                    <p id="temp4">Temp:</p>
+                    <p id="wind4">Wind:</p>
+                    <p id="hum4">Humidity:</p>
                 </div>
-                <div id="today" class="nextday">
-                    <h2>city</h2>
-                    <p id="temp">Temp:</p>
-                    <p id="wind">Wind:</p>
-                    <p id="hum">Humidity:</p>
+                <div  class="nextday">
+                    <h3 id="t5"></h3>
+                    <p id="temp5">Temp:</p>
+                    <p id="wind5">Wind:</p>
+                    <p id="hum5">Humidity:</p>
                 </div>
             </div>
         </div>
 
     </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./Assets/js/index.js"></script>
 </body>
 </html>
