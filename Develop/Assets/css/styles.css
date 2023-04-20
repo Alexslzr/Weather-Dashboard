@@ -1,0 +1,39 @@
+
+body{
+    margin: 0;
+}
+
+header{
+    text-align: center;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
+
+main{
+    display: flex;
+}
+section{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#today{
+    border: 1px solid black;
+}
+
+#day5{
+    display: flex;
+    justify-content: space-between;
+}
+
+#rightside{
+    width: 70%;
+}
+
+.nextday{
+    width: 18%;
+}
