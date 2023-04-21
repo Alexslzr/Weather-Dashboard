@@ -10,8 +10,6 @@ let cities = document.getElementById('cities')
 let storedCity = JSON.parse(localStorage.getItem("cities"))
 let array=[];
 
-
-
 if(storedCity!== null){
     array=storedCity;
     for(let i=0; i<storedCity.length; i++){
@@ -37,8 +35,6 @@ $('#t4').text(dayjs().add(4, 'day').format('M/D/YYYY'))
 $('#t5').text(dayjs().add(5, 'day').format('M/D/YYYY'))
 
 var responseText = document.getElementById('response-text');
-
-
 
 function today(url) {
   fetch(url)
@@ -78,15 +74,15 @@ function forecast(urlForecast){
                 let day;
                 
                 let currentHour = dayjs().add(1, 'day').format('HH');
+                
                 for(let i=0; i<data.list.length-1;i++){
-
 
                     prevHour=data.list[i].dt_txt;
                     day = prevHour.slice(0,10);
                     nextHour=data.list[i+1].dt_txt;
+                    let timeComp = (currentHour>=prevHour.slice(11,13) && currentHour<nextHour.slice(11,13))
 
-
-                    if(dayjs().add(1, 'day').format('YYYY-MM-D')===day  && currentHour>=prevHour.slice(11,13) && currentHour<nextHour.slice(11,13)){
+                    if(dayjs().add(1, 'day').format('YYYY-MM-D')===day  && timeComp){
                         let forecast1 = i;
                         let iconcode = data.list[forecast1].weather[0].icon;
                         let iconurl="http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -95,7 +91,7 @@ function forecast(urlForecast){
                         $('#wind1').text('Wind: '+data.list[forecast1].wind.speed+' m/s')
                         $('#hum1').text('Humidity: '+data.list[forecast1].main.humidity+' %')
                     }
-                    if(dayjs().add(2, 'day').format('YYYY-MM-D')===day  && currentHour>=prevHour.slice(11,13) && currentHour<nextHour.slice(11,13)){
+                    if(dayjs().add(2, 'day').format('YYYY-MM-D')===day  && timeComp){
                         let forecast2 = i;
                         iconcode = data.list[forecast2].weather[0].icon;
                         iconurl="http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -104,7 +100,7 @@ function forecast(urlForecast){
                         $('#wind2').text('Wind: '+data.list[forecast2].wind.speed+' m/s')
                         $('#hum2').text('Humidity: '+data.list[forecast2].main.humidity+' %')
                     }
-                    if(dayjs().add(3, 'day').format('YYYY-MM-D')===day  && currentHour>=prevHour.slice(11,13) && currentHour<nextHour.slice(11,13)){ 
+                    if(dayjs().add(3, 'day').format('YYYY-MM-D')===day  && timeComp){ 
                         let forecast3 = i;
                         iconcode = data.list[forecast3].weather[0].icon;
                         iconurl="http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -113,7 +109,7 @@ function forecast(urlForecast){
                         $('#wind3').text('Wind: '+data.list[forecast3].wind.speed+' m/s')
                         $('#hum3').text('Humidity: '+data.list[forecast3].main.humidity+' %')
                     }
-                    if(dayjs().add(4, 'day').format('YYYY-MM-D')===day  && currentHour>=prevHour.slice(11,13) && currentHour<nextHour.slice(11,13)){
+                    if(dayjs().add(4, 'day').format('YYYY-MM-D')===day  && timeComp){
                         let forecast4 = i;
                         iconcode = data.list[forecast4].weather[0].icon;
                         iconurl="http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -122,7 +118,7 @@ function forecast(urlForecast){
                         $('#wind4').text('Wind: '+data.list[forecast4].wind.speed+' m/s')
                         $('#hum4').text('Humidity: '+data.list[forecast4].main.humidity+' %')
                     }
-                    if(dayjs().add(5, 'day').format('YYYY-MM-D')===day  && currentHour>=prevHour.slice(11,13) && currentHour<nextHour.slice(11,13)){
+                    if(dayjs().add(5, 'day').format('YYYY-MM-D')===day  && timeComp){
                         let forecast5 = i
                         iconcode = data.list[forecast5].weather[0].icon;
                         iconurl="http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -138,7 +134,6 @@ function forecast(urlForecast){
         }
     });
 }
-
 
 btnEl.addEventListener("click", function(){
     if(inputEl.value){
