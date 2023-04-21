@@ -46,6 +46,7 @@ function today(url) {
                 let iconCode = data.weather[0].icon;
                 let iconUrl="http://openweathermap.org/img/w/" + iconCode + ".png";        
                 $('#icon').attr('src', iconUrl)
+                $('#icon').attr('alt', "weather icon forecast")
                 $('#temp').text('Temp: '+data.main.temp+' °C')
                 $('#wind').text('Wind: '+data.wind.speed+' m/s')
                 $('#hum').text('Humidity: '+data.main.humidity+' %')
@@ -87,6 +88,7 @@ function forecast(urlForecast){
                         let iconcode = data.list[forecast1].weather[0].icon;
                         let iconurl="http://openweathermap.org/img/w/" + iconcode + ".png";
                         $('#icon1').attr('src', iconurl)
+                        $('#icon1').attr('alt', "weather icon forecast")
                         $('#temp1').text('Temp: '+data.list[forecast1].main.temp+' °C')
                         $('#wind1').text('Wind: '+data.list[forecast1].wind.speed+' m/s')
                         $('#hum1').text('Humidity: '+data.list[forecast1].main.humidity+' %')
@@ -96,6 +98,7 @@ function forecast(urlForecast){
                         iconcode = data.list[forecast2].weather[0].icon;
                         iconurl="http://openweathermap.org/img/w/" + iconcode + ".png";
                         $('#icon2').attr('src', iconurl)
+                        $('#icon2').attr('alt', "weather icon forecast")
                         $('#temp2').text('Temp: '+data.list[forecast2].main.temp+' °C')
                         $('#wind2').text('Wind: '+data.list[forecast2].wind.speed+' m/s')
                         $('#hum2').text('Humidity: '+data.list[forecast2].main.humidity+' %')
@@ -105,6 +108,7 @@ function forecast(urlForecast){
                         iconcode = data.list[forecast3].weather[0].icon;
                         iconurl="http://openweathermap.org/img/w/" + iconcode + ".png";
                         $('#icon3').attr('src', iconurl)
+                        $('#icon3').attr('alt', "weather icon forecast")
                         $('#temp3').text('Temp: '+data.list[forecast3].main.temp+' °C')
                         $('#wind3').text('Wind: '+data.list[forecast3].wind.speed+' m/s')
                         $('#hum3').text('Humidity: '+data.list[forecast3].main.humidity+' %')
@@ -114,6 +118,7 @@ function forecast(urlForecast){
                         iconcode = data.list[forecast4].weather[0].icon;
                         iconurl="http://openweathermap.org/img/w/" + iconcode + ".png";
                         $('#icon4').attr('src', iconurl)
+                        $('#icon4').attr('alt', "weather icon forecast")
                         $('#temp4').text('Temp: '+data.list[forecast4].main.temp+' °C')
                         $('#wind4').text('Wind: '+data.list[forecast4].wind.speed+' m/s')
                         $('#hum4').text('Humidity: '+data.list[forecast4].main.humidity+' %')
@@ -123,6 +128,7 @@ function forecast(urlForecast){
                         iconcode = data.list[forecast5].weather[0].icon;
                         iconurl="http://openweathermap.org/img/w/" + iconcode + ".png";
                         $('#icon5').attr('src', iconurl)
+                        $('#icon5').attr('alt', "weather icon forecast")
                         $('#temp5').text('Temp: '+data.list[forecast5].main.temp+' °C')
                         $('#wind5').text('Wind: '+data.list[forecast5].wind.speed+' m/s')
                         $('#hum5').text('Humidity: '+data.list[forecast5].main.humidity+' %')
