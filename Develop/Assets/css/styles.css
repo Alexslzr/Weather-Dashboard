@@ -1,6 +1,7 @@
 
 body{
     margin: 0;
+    font-family: sans-serif;
 }
 
 header{
@@ -56,11 +57,32 @@ section{
     margin-bottom: 10px;
 }
 
+button{
+    padding: 10px 0px;
+    font-size: 15px;
+}
+
 #cities{
     text-align: center;
     border-top: 1px solid gray;
 }
 
+#cities button{
+    width: 100%;
+    margin-top: 20px;
+    background-color: #AEAEAEff;
+    color: white;
+    border: none;
+    border-radius: 3px
+}
+
+#today div{
+    display: flex;
+}
+/*.nextday{
+    min-width: 120px;
+    max-width: 160px;
+}*/
 /* CSS HEX 
 --charcoal: #323D4Fff;
 --cornflower-blue: #6991E3ff;
