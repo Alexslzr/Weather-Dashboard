@@ -1,4 +1,4 @@
-# 06 Server-Side APIs: Weather Dashboard
+# Weather Dashboard
 
 <img src="https://img.shields.io/badge/License-MIT-blue"></img>
 
